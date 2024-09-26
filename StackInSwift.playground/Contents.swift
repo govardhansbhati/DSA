@@ -21,24 +21,32 @@ public struct Stack<T> {
     }
 }
 
+extension Stack: CustomStringConvertible {
+    public var description: String {
+        return items.description
+    }
+}
+
 
 var customStack = Stack<Int>()
 customStack.push(element: 4)
-print(customStack)
+Swift.print(customStack)
 
 customStack.push(element: 8)
-print(customStack)
+Swift.print(customStack)
 
 customStack.push(element: 12)
-print(customStack)
+Swift.print(customStack)
+
+Swift.print(customStack.description)
 
 // Using peek method
-print(customStack.peek()!)
+Swift.print(customStack.peek()!)
 
 // Using pop method
 var x = customStack.pop()
-print(x!)
+Swift.print(x!)
 
 x = customStack.pop()
-print(x!)
+Swift.print(x!)
 
